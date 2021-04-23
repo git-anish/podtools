@@ -53,16 +53,22 @@ type Guid struct {
 	Text            string `xml:",chardata"`
 }
 
+type ItemImage struct {
+	Href string `xml:"href,attr"`
+}
+
 type Item struct {
-	Author      string     `xml:"author,omitempty"`
-	Category    string     `xml:"category,omitempty"`
-	Description string     `xml:"description,omitempty"`
-	Duration    Duration   `xml:"duration,omitempty"`
-	Enclosure   *Enclosure `xml:"enclosure,omitempty"`
-	Guid        *Guid      `xml:"guid,omitempty"`
-	Keywords    Keywords   `xml:"keywords,omitempty"` // TODO: Parse
-	PubDate     Timestamp  `xml:"pubDate,omitempty"`
-	Title       string     `xml:"title,omitempty"`
+	Author       string     `xml:"author,omitempty"`
+	Category     string     `xml:"category,omitempty"`
+	Description  string     `xml:"description,omitempty"`
+	Duration     Duration   `xml:"duration,omitempty"`
+	Enclosure    *Enclosure `xml:"enclosure,omitempty"`
+	Guid         *Guid      `xml:"guid,omitempty"`
+	Keywords     Keywords   `xml:"keywords,omitempty"` // TODO: Parse
+	PubDate      Timestamp  `xml:"pubDate,omitempty"`
+	Title        string     `xml:"title,omitempty"`
+	Image        *ItemImage `xml:"image,omitempty"`
+	ChannelTitle string     `xml:"Channeltitle,omitempty"`
 }
 
 type Owner struct {
